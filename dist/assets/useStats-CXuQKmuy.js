@@ -1,0 +1,1 @@
+import{r as n}from"./index-Bs5FRv9-.js";import{p as f,b as u}from"./github-BZt07Rb0.js";function w(i){const[c,p]=n.useState({}),e=i.join("|");return n.useEffect(()=>{let o=!0;return(async()=>{const a={};await Promise.all(e.split("|").map(async s=>{const t=f(s);if(!t)return;const r=await u(t.owner,t.repo);r&&(a[s]=r)})),o&&p(a)})(),()=>{o=!1}},[e]),c}export{w as u};
