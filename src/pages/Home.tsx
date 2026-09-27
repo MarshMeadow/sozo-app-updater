@@ -194,6 +194,12 @@ export default function Home() {
                   <ExternalLink size={20} />
                   View release notes
                 </a>
+
+                <p className="hero-note">
+                  <Smartphone size={14} aria-hidden="true" /> This download link is for the{' '}
+                  <strong>Android (mobile)</strong> app. Looking for TV, Desktop, or the legacy
+                  client? <NavLink to="/downloads">See all platforms</NavLink>.
+                </p>
               </div>
             )}
           </div>

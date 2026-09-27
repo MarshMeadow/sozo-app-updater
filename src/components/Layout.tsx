@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { Menu, Settings, X } from 'lucide-react'
+import { ExternalLink, Menu, Settings, X } from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
+import { SOZO_WEBSITE } from '../constants/links'
 
 const links = [
   { to: '/', label: 'Home' },
@@ -16,6 +17,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="layout">
+      <div className="unofficial-banner">
+        <span>
+          ⚠️ This is an <strong>unofficial</strong> community updater site — not affiliated with the
+          Sozo team.
+        </span>
+        <a href={SOZO_WEBSITE} target="_blank" rel="noopener noreferrer">
+          Visit the official Sozo website <ExternalLink size={14} aria-hidden="true" />
+        </a>
+      </div>
       <header className="site-header">
         <div className="container header-inner">
           <NavLink to="/" className="logo" aria-label="Sozo Updater home">
